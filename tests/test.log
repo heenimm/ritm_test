@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.8.3, pytest-7.4.3, pluggy-1.3.0 -- /Library/Frameworks/Python.framework/Versions/3.8/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/halimlka/PycharmProjects/ritm_test
+configfile: pytest.ini
+collecting ... collected 4 items
+
+test_suit_elements.py::TestSuitElementsPage::test_buttons_page PASSED
+test_suit_elements.py::TestSuitElementsPage::test_checkbox_page PASSED
+test_suit_elements.py::TestSuitElementsPage::test_slider PASSED
+test_suit_elements.py::TestSuitElementsPage::test_table PASSED
+
+========================= 4 passed in 71.00s (0:01:10) =========================

@@ -7,7 +7,7 @@ from base.base_class import Base
 from base_url import BASE_URL
 
 
-class Checkbox_page(Base):
+class CheckboxPage(Base):
     url = BASE_URL
 
     def __init__(self, driver):

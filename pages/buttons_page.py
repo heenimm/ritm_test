@@ -8,7 +8,7 @@ from base.base_class import Base
 from base.base_url import BASE_URL
 
 
-class Buttons_page(Base):
+class ButtonsPage(Base):
     url = BASE_URL
 
     def __init__(self, driver):
@@ -19,7 +19,8 @@ class Buttons_page(Base):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, locators.ELEMENTS_MENU_LOCATOR)))
 
     def get_buttons_click(self):
-        return self.driver.find_element(By.ID, locators.BUTTONS_CLICK_ID)
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".accordion>.element-group:nth-child(1) #item-4")))
+        # return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.ID, locators.BUTTONS_CLICK_ID)))
 
     def get_double_click_button(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, locators.DOUBLE_CLICK_BUTTON_LOCATOR)))
@@ -30,11 +31,9 @@ class Buttons_page(Base):
     def get_dynamic_click_button(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, locators.CLICK_ME_BUTTON_LOCATOR)))
 
-
     def click_open_elements_page(self):
         elements_menu = self.get_elements_menu()
         elements_menu.click()
-
 
     def click_open_buttons_page(self):
         self.driver.execute_script("window.scrollTo(0, 100)")
